@@ -16,19 +16,19 @@ function printToDom () {
 
 // Keys for Purina
 	console.log("purina types: ", dogFood.dog_brands[1].types);
-
+var string="";
+// For loops to add to DOM
 	for (i=0; i<dogFood.dog_brands.length; i++) {
-		inputEl.innerHTML+= "<div class='col-md-6'>" + dogFood.dog_brands[i].name;
+		string+= "<div class='col-md-3'>"+"<h2>" + dogFood.dog_brands[i].name + "</h2>";
 		for(j=0; j<dogFood.dog_brands[0].types.length; j++) {
-			inputEl.innerHTML+="<p>Type: " + dogFood.dog_brands[j].types[j].type + "</p>";
+			string+="<p> Type: " + dogFood.dog_brands[j].types[j].type + "</p>";
 			for(x=0; x<dogFood.dog_brands[0].types[0].volumes.length; x++) {
-				inputEl.innerHTML+=	"<p> Volume: " + dogFood.dog_brands[x].types[x].volumes[x].name + "</p>" +
-														"<p> Price: " + dogFood.dog_brands[x].types[x].volumes[x].price + "</p></div>";
+				string+=	"<p> Volume: " + dogFood.dog_brands[x].types[x].volumes[x].name + "</p>" +
+														"<p> Price: " + dogFood.dog_brands[x].types[x].volumes[x].price + "</p>";
 			}
 		}
+ 		string+= "</div>";
  	}
-
-
-
+ 	inputEl.innerHTML=  string;
 }
 
