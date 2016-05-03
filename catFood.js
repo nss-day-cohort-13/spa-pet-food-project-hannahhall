@@ -20,7 +20,7 @@ function printToDomCat () {
 				if(catFood.cat_brands[i].types[j].volumes.length===undefined) {
 					break
 				} else {
-					string+=`<div class='col-md-6 innerRow'><p>Volume: ${catFood.cat_brands[i].types[j].volumes[x].name}</p>
+					string+=`<div class='col-md-6 innerRows'><p>Volume: ${catFood.cat_brands[i].types[j].volumes[x].name}</p>
 						 <p>Price: $${catFood.cat_brands[i].types[j].volumes[x].price} </p></div>`;
 		 		}
 			}

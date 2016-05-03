@@ -16,7 +16,7 @@ function printToDomDog () {
 			string+=`<div class='col-md-6 innerRow'><h4>${dogFood.dog_brands[i].types[j].type}</h4>`;
 			// Volume and Price
 			for(x=0; x<dogFood.dog_brands[i].types[j].volumes.length; x++) {
-				string+=`<div class='col-md-6 innerRow'><p>Volume: ${dogFood.dog_brands[i].types[j].volumes[x].name}</p>
+				string+=`<div class='col-md-6 innerRows'><p>Volume: ${dogFood.dog_brands[i].types[j].volumes[x].name}</p>
 								 <p>Price: $${dogFood.dog_brands[i].types[j].volumes[x].price} </p></div>`;
 			}
 			string+=`</div>`;
