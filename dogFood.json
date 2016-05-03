@@ -17,7 +17,7 @@
 					]
 				},
 				{
-					"type": "standard",
+					"type": "Standard",
 					"volumes": [
 						{
 							"name": "58oz",

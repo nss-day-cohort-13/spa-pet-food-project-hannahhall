@@ -2,6 +2,7 @@
 	"cat_brands": [
 		{
 			"name": "Purrina",
+			"breed": "Siamese, Bengal, Showshoe, and Munchkin",
 			"types": [
 				{
 					"type": "Kitten",
@@ -37,6 +38,7 @@
 		},
 		{
 			"name": "Meow Meal",
+			"breed": "Manx, Egyptian Mau, Himalayan, and Rag Doll",
 			"types": [
 				{
 					"type": "Kitten",
