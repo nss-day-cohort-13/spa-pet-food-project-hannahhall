@@ -10,18 +10,21 @@ function printToDomCat () {
 	// For loops to add to DOM
 	// Brand Name
 	for (i=0; i<catFood.cat_brands.length; i++) {
-		string+= `<div class='col-md-6'><h2>${catFood.cat_brands[i].name}</h2>
-							<h4>${catFood.cat_brands[i].breed}</h4>`;
+		var cat_brands= catFood.cat_brands[i];
+		string+= `<div class='col-md-6'><h2>${cat_brands.name}</h2>
+							<h4>${cat_brands.breed}</h4>`;
 		// Brand Type
-		for(j=0; j<catFood.cat_brands[i].types.length; j++) {
-			string+=`<div class='col-md-6 innerRow'><h4>${catFood.cat_brands[i].types[j].type}</h4>`;
+		for(j=0; j<cat_brands.types.length; j++) {
+			var catBrandTypes= cat_brands.types[j];
+			string+=`<div class='col-md-6 innerRow'><h4>${catBrandTypes.type}</h4>`;
 			// Volume and Price
-			for(x=0; x<catFood.cat_brands[i].types[j].volumes.length; x++) {
-				if(catFood.cat_brands[i].types[j].volumes.length===undefined) {
+			for(x=0; x<catBrandTypes.volumes.length; x++) {
+				var catTypeVolume= catBrandTypes.volumes[x];
+				if(catBrandTypes.volumes.length===undefined) {
 					break
 				} else {
-					string+=`<div class='col-md-6 innerRows'><p>Volume: ${catFood.cat_brands[i].types[j].volumes[x].name}</p>
-						 <p>Price: $${catFood.cat_brands[i].types[j].volumes[x].price} </p></div>`;
+					string+=`<div class='col-md-6 innerRows'><p>Volume: ${catTypeVolume.name}</p>
+						 <p>Price: $${catTypeVolume.price} </p></div>`;
 		 		}
 			}
 		 	string+=`</div>`;
